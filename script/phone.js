@@ -55,8 +55,8 @@ const handleSearch = (isShowAll) => {
     toggleLoadingSpinner(true);
     const searchField = document.getElementById("search-field");
     const searchText = searchField.value;
-    console.log(searchText);
     loadPhone(searchText, isShowAll);
+   
 }
 
 const toggleLoadingSpinner = (isLoading) => {
@@ -71,6 +71,7 @@ const toggleLoadingSpinner = (isLoading) => {
 const handleShowAll = () => {
     handleSearch(true);
 }
+
 
 const handleShowDetails = async (id) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
